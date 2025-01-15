@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Dot_Net_Quiz_API" />
+        <module name="Quiz-Admin-Server" />
+        <module name="Java-Quiz_API" />
+        <module name="Python-Quiz_API" />
+        <module name="Spring-Registry-Server" />
+        <module name="JS-Quiz_API" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Dot_Net_Quiz_API" options="-parameters" />
+      <module name="JS-Quiz_API" options="-parameters" />
+      <module name="Java-Quiz_API" options="-parameters" />
+      <module name="Python-Quiz_API" options="-parameters" />
+      <module name="Quiz-Admin-Server" options="-parameters" />
+      <module name="Spring-Registry-Server" options="-parameters" />
+    </option>
+  </component>
+</project>
