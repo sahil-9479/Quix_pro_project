@@ -1,0 +1,232 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #7C57D5 (25% lighter)
+
+
+2. #9E80E8 (50% lighter)
+
+
+3. #CFC6F7 (75% lighter) */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Main Quiz Container */
+.quiz-container {
+    /* border: 1px solid red; */
+    background: #fff;
+    width: 80%;
+    height: 75%;
+    border-radius: 10px;
+    padding: 40px 450px 0px 450px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.quiz-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Section */
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Quiz Info Section */
+.quiz-info {
+    position: absolute;
+    top :40px;
+    left: 193px;
+    font-size: 1rem;
+    color: #555;
+    width: 210px;
+    height: 70px;
+    background: linear-gradient(to right, #5a2fc2, #9c6fff , #ffffffd8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.timer {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.5rem;
+    /* background: radial-gradient(circle, #ff7f50, #ff4500); */
+    /* background-color:#5a2fc2 ; */
+    background: linear-gradient(to right, #ffffffd8,#9c6fff, #5a2fc2);
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+/* Question Status */
+.question-status {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: red;
+    /* border: 1px solid red; */
+    text-align: start;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    background: #e0e0e0;
+    border-radius: 5px;
+    height: 1px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Ensure the progress bar spans the full width of the container */
+}
+
+.progress-bar {
+    /* border: 2px solid red; */
+    background: #5a2fc2;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Question Area */
+.question-card {
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Options Section */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;   
+}
+
+.options button {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #916ded;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.options button:hover {
+    background-color: #8a4fff;
+    transform: scale(1.05);
+}
+
+.options button:active {
+    background-color: #4a1c82;
+}
+
+/* Next Button */
+.next-button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ffb400;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.next-button:hover {
+    background-color: #ff9100;
+    transform: scale(1.05);
+}
+
+.next-button:active {
+    background-color: #cc7300;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#next-batch{
+    border: 2px solid red;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ffb400;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#result-button{
+    border: 2px solid red;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #ffb400;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .question-card {
+        font-size: 1.1rem;
+    }
+
+    .options button {
+        font-size: 1rem;
+    }
+
+    .next-button {
+        font-size: 1rem;
+    }
+}
